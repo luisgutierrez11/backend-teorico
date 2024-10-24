@@ -5,9 +5,7 @@
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build:ui": "rm -rf dist && cd C:/Users/Usuario/Desktop/Desarrollo/React/pizarron-teorico && npm run build && cp -r dist C:/Users/Usuario/Desktop/Desarrollo/React/backend-teorico",
-    "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && git push"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Luis",
   "license": "UNLICENSED",
