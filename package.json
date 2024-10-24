@@ -5,14 +5,17 @@
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:ui": "rm -rf dist && cd C:/Users/Usuario/Desktop/Desarrollo/React/pizarron-teorico && npm run build && cp -r dist C:/Users/Usuario/Desktop/Desarrollo/React/backend-teorico",
+    "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && git push"
   },
   "author": "Luis",
   "license": "UNLICENSED",
   "description": "",
   "dependencies": {
     "cors": "^2.8.5",
-    "express": "^4.21.1"
+    "express": "^4.21.1",
+    "index.js": "^0.0.3"
   },
   "devDependencies": {
     "nodemon": "^3.1.7"
