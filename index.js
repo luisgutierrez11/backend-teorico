@@ -4,11 +4,9 @@ require('dotenv').config()
 const Note = require('./models/note')
 
 const cors = require('cors')  // <------ 
-
 app.use(cors())         //
 
 app.use(express.static('dist'))
-
 app.use(express.json())
 
 let notes = [
@@ -53,7 +51,7 @@ app.get('/api/notes/:id', (request, response, next) => {
     .catch(error => next(error))
 })
 
-app.delete('/api/notes/:id', (request, response) => {
+app.delete('/api/notes/:id', (request, response, next) => {
   Note.findByIdAndDelete(request.params.id)
     .then(result => {
       response.status(204).end()
