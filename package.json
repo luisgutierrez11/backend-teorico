@@ -7,7 +7,8 @@
     "dev": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:ui": "rm -rf dist && cd C:Users/Usuario/Desktop/Desarrollo/React/pizarron-teorico && npm run build && cp -r dist C:/Users/Usuario/Desktop/Desarrollo/React/backend-teorico",
-    "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && git push"
+    "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && git push",
+    "lint": "eslint ."
   },
   "author": "Luis",
   "license": "UNLICENSED",
@@ -20,6 +21,10 @@
     "mongoose": "^8.7.3"
   },
   "devDependencies": {
+    "@eslint/js": "^9.13.0",
+    "@stylistic/eslint-plugin-js": "^2.10.1",
+    "eslint": "^9.13.0",
+    "globals": "^15.11.0",
     "nodemon": "^3.1.7"
   }
 }
